@@ -5,11 +5,13 @@ This is a spark project for flattening Json and convert it to dataframe. This is
 "L0_1": 1,"L0_S1": {"L1_1": "a","L1_2": 2},"L0_2": "b","L0_3": [1,2,3],"L1_AR1": [5,6,7],"L0_4": {"L1_5": "d","l1_6": ["Rama","Krishna"]}}
 
 ### Before flattening the the Data Frame will be treated in Spark as
+<tr>
 +----+----+---------+--------------------+------+---------+
 |L0_1|L0_2|     L0_3|                L0_4| L0_S1|   L1_AR1|
 +----+----+---------+--------------------+------+---------+
 |   1|   b|[1, 2, 3]|[d, [Rama, Krishna]]|[a, 2]|[5, 6, 7]|
 +----+----+---------+--------------------+------+---------+
+ </tr>
 root
  |-- L0_1: long (nullable = true)
  |-- L0_2: string (nullable = true)
