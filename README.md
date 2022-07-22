@@ -1,10 +1,10 @@
 # JsonFlattening
 This is a spark project for flattening Json and convert it to dataframe. This is a one to one flattening logic
 
-## Lets Assume this is the json string which we want to flatten
+### Lets Assume this is the json string which we want to flatten
 "L0_1": 1,"L0_S1": {"L1_1": "a","L1_2": 2},"L0_2": "b","L0_3": [1,2,3],"L1_AR1": [5,6,7],"L0_4": {"L1_5": "d","l1_6": ["Rama","Krishna"]}}
 
-## Before flattening the the Data Frame will be treated in Spark as
+### Before flattening the the Data Frame will be treated in Spark as
 +----+----+---------+--------------------+------+---------+
 |L0_1|L0_2|     L0_3|                L0_4| L0_S1|   L1_AR1|
 +----+----+---------+--------------------+------+---------+
@@ -25,7 +25,7 @@ root
  |-- L1_AR1: array (nullable = true)
  |    |-- element: long (containsNull = true)
  
- # After this one to one flattening logic the the data frame will be converted to 
+ ### After this one to one flattening logic the the data frame will be converted to 
  +----+----+----------+-----------+-----------+----+------+----------+
 |L0_1|L0_2|L0_4__L1_5|L0_S1__L1_1|L0_S1__L1_2|L0_3|L1_AR1|L0_4__l1_6|
 +----+----+----------+-----------+-----------+----+------+----------+
